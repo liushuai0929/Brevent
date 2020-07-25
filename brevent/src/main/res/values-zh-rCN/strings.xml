@@ -19,23 +19,27 @@
     <string name="fragment_guide_enjoy">使用</string>
     <string name="fragment_guide_enjoy_message">请尽情享受黑阈，发现任何问题，欢迎带上日志提交反馈。</string>
     <string name="fragment_guide_enjoy_message2">默认黑阈方法为“待机，然后强行停止”。应用待机（App Standby，Android 6.0 引入，部分设备不支持）后不能联网、执行任务（Job）与同步。\n\n黑阈不强行停止安全应用。此外，黑阈集中处理，根据事件级别延后 3 到 60 秒不等。</string>
-    <string name="start_brevent">进入黑阈</string>
 
     <string name="fragment_guide_adb">ADB</string>
     <string name="fragment_guide_adb_message">ADB（Android Debug Bridge）是一个电脑与 Android 设备进行通信的命令行工具。它是 platform-tools 的一部分，您可从 https://developer.android.google.cn/studio/releases/platform-tools 下载（长按进入复制模式）。</string>
     <string name="fragment_guide_adb_message2">1. 解压 platform-tools-latest-&lt;平台&gt;.zip\n\n2. 进入 platform-tools 目录\n\n3.（Windows）按住 Shift 键，点击鼠标右键，选择“在此处打开命令窗口”，请使用“.\\adb”代替提示的“adb”（使用“复制指令”时，请删除重复的“adb”）\n\n3.（macOS）打开“访达”，进入“应用程序”，进入“实用工具”，打开“终端”，把“adb”拖到“终端”里，请使用这个带全路径的“adb”代替提示的“adb”（使用“复制指令”时，请删除重复的“adb”）\n\n4. 每次开机都需要重新 ADB，请谨慎重启及避免关机</string>
 
+    <string name="start_brevent">进入黑阈</string>
     <string name="brevent_service_start">请启动黑阈服务（%s）</string>
     <string name="brevent_service_no_response">黑阈服务没有响应（%s）</string>
     <string name="brevent_service_guide">1. 打开“开发者选项”，启用“USB调试”%1$s\n\n2. 使用 USB 连接到电脑%2$s\n\n3. 在电脑命令行中执行“adb devices”，确认可以找到手机（“adb”可能需要调整，请参考“向导 - ADB”或中文图文 PDF 版文档）\n\n4. 在命令行中执行“%3$s”</string>
-    <string name="brevent_service_guide_root">您的设备看起来已 Root。您可自行开启网络调试，或者直接点按 Root。\n\n黑阈不提倡 Root，并且几乎不对 Root 提供技术支持。\n\n如果您没有见到 Root 按钮，请按 7 次 Back，然后支付 3 二向箔。如果无法开机自启，请自查任何系统限制。</string>
+    <string name="brevent_service_guide_root">您的设备看起来已 Root。您可自行开启网络调试，或者直接点按 Root。\n\n黑阈不需要也不提倡 Root，并且需要支付。\n\n如果无法开机自启，请自查任何系统限制。</string>
+    <string name="brevent_service_guide_adb">网络调试已开启，请点按 ADB 启动黑阈服务。\n\n网络调试有风险，不要随意授权。</string>
+    <string name="brevent_service_payment_root">黑阈不需要也不提倡 Root，并且需要支付。</string>
     <string name="brevent_service_open_development">开发者选项</string>
     <string name="brevent_service_copy_path">复制指令</string>
     <string name="brevent_service_command_copied">指令已复制：%s</string>
     <string name="brevent_service_adb_running">（已启用）</string>
     <string name="brevent_service_usb_connected">（已连接）</string>
     <string name="brevent_service_hard">没有电脑</string>
-    <string name="brevent_service_success">黑阈服务已启动。请点按图标选择一些应用，然后使用右上角的按钮黑阈它们</string>
+    <string name="brevent_service_success">黑阈服务已启动。请点按图标选择一些应用，然后使用右上角的按钮黑阈它们。</string>
+    <string name="brevent_service_mocked">黑阈服务并未启动，当前处于只读模式。</string>
+    <string name="brevent_service_mock">只读模式</string>
 
     <string name="fragment_apps_user">用户应用</string>
     <string name="fragment_apps_system">系统应用</string>
@@ -48,19 +52,25 @@
     <string name="process_starting">正在启动黑阈服务，请稍候……</string>
     <string name="process_checking">正在检查黑阈服务，请稍候……</string>
 
+    <string name="process_status_persistent">永久应用</string>
+    <string name="process_status_foreground">前台使用</string>
     <string name="process_status_running">正在运行</string>
     <string name="process_status_standby">已经待机</string>
     <string name="process_status_ignored">无需处理</string>
     <string name="process_status_disabled">已经停用</string>
     <string name="process_status_stopped">没有运行</string>
+    <string name="process_status_uninstalled">已经卸载</string>
     <string name="process_not_running">（没有运行）</string>
     <string name="process_no_stats">（从未打开）</string>
     <string name="process_stats">（至 %1$s 共 %2$s）</string>
+    <string name="process_stats_running">运行 %s</string>
     <string name="process_all_top">%d 个前台</string>
     <string name="process_all_service">%d 个服务</string>
+    <string name="process_all_service_cached">%d 个缓存服务</string>
     <string name="process_all_cached">%d 个缓存</string>
     <string name="process_all_total">%d 个</string>
     <string name="process_service">%d 个服务</string>
+    <string name="process_service_cached">%d 个缓存服务</string>
     <string name="process_total">共 %d 个</string>
     <plurals name="process_process">
         <item quantity="other">进程</item>
@@ -88,6 +98,11 @@
     <string name="context_menu_disable">停用</string>
     <string name="context_menu_enable">启用</string>
     <string name="context_menu_enable_open">临时启用</string>
+    <string name="context_menu_market">商店详情</string>
+    <string name="context_menu_uninstall_keep_data">卸载（保留数据）</string>
+    <string name="context_menu_uninstall">卸载</string>
+    <string name="uninstall_keep_data_confirm">卸载（保留数据）以后，再次安装可以直接使用当前数据。\n\n此操作无法撤回，真的要继续么？</string>
+    <string name="uninstall_confirm">卸载以后，将清除所有数据。\n\n此操作无法撤回，真的要继续么？</string>
 
     <string name="important_input">%s（输入法）</string>
     <string name="important_alarm">%s（闹钟应用）</string>
@@ -111,6 +126,7 @@
     <string name="important_os_bluetooth">蓝牙</string>
     <string name="important_os_nfc">NFC</string>
     <string name="important_os_se">安全元素</string>
+    <string name="important_os_network_stack">网络堆栈</string>
     <string name="important_os_shell">Shell</string>
     <string name="important_os_other">UID %1$d</string>
 
@@ -121,11 +137,15 @@
     <string name="menu_sort_by_update_time">更新时间</string>
     <string name="menu_sort_by_last_time">上次使用时间</string>
     <string name="menu_sort_by_usage_time">使用时长</string>
+    <string name="menu_sort_by_apk_size">APK 大小（专业版）</string>
+    <string name="menu_sort_by_avg_mem">平均内存使用量 (专业版)</string>
+    <string name="menu_sort_by_max_mem">最高内存使用量 (专业版)</string>
     <string name="menu_feedback">反馈</string>
     <string name="menu_settings">设置</string>
-    <string name="menu_guide">向导</string>
     <string name="menu_template">模板</string>
+    <string name="menu_guide">向导</string>
     <string name="menu_command">执行指令</string>
+    <string name="menu_brevent">启动黑阈</string>
 
     <string name="feedback_message">欢迎提交反馈。\n\n如果您有 GitHub 帐号，请直接创建一个问题；您也可以查看其他朋友已经创建的问题。%s</string>
     <string name="feedback_message_email">\n\n如果您的反馈包含私人信息，请发送邮件。</string>
@@ -190,16 +210,18 @@
     <string name="brevent_appops_label">可能导致应用无法正常使用</string>
     <string name="brevent_disable">停用应用</string>
     <string name="brevent_disable_label">停用以后，必须先启用才能继续使用</string>
+
+    <string name="experimental">实验性</string>
     <string name="brevent_dynamic_gms">动态 GMS（实验性）</string>
     <string name="brevent_dynamic_gms_label">黑阈 GMS（Google Play 服务）以后，动态停用和启用</string>
+    <string name="brevent_suspend">暂停（实验性）</string>
+    <string name="brevent_suspend_label">使用 暂停 代替 停用</string>
 
     <string name="brevent_ocd">强迫症选项</string>
     <string name="brevent_auto_update">自动更新</string>
     <string name="brevent_auto_update_label">应用安装或卸载之后，更新黑阈清单</string>
-    <string name="brevent_forcestop_check">建议取消黑阈</string>
-    <string name="brevent_forcestop_check_system">系统应用</string>
-    <string name="brevent_forcestop_check_all">所有应用</string>
-    <string name="brevent_forcestop_check_none">关闭</string>
+    <string name="brevent_forcestop_check">强行停止检查</string>
+    <string name="brevent_forcestop_check_label">当强行停止过于频繁时，发出通知</string>
     <string name="brevent_keep_widgets">优化微件</string>
     <string name="brevent_keep_widgets_label">避免强行停止微件，从而保证微件可用</string>
     <string name="brevent_keep_safe">无需处理</string>
@@ -207,7 +229,8 @@
 
     <string name="brevent_about">关于</string>
     <string name="brevent_about_system">系统状态</string>
-    <string name="brevent_about_system_summary">待机：%1$s\n停止状态：%2$s\n自动更新：%3$s\n自动黑阈：%4$s\n应用操作：%5$s\n停用应用：%6$s\n\n支持状态由设备决定，与支付无关</string>
+    <string name="brevent_about_system_summary">待机：%1$s\n停止状态：%2$s\n自动更新：%3$s\n自动黑阈：%4$s\n应用操作：%5$s\n停用应用：%6$s\n暂停应用：%7$s\n\n支持状态由设备决定，与支付无关</string>
+    <string name="brevent_about_system_summary_mock">待机：%1$s\n（只读模式）</string>
     <string name="brevent_about_system_supported">支持</string>
     <string name="brevent_about_system_unsupported">不支持</string>
     <string name="brevent_about_developer">开发者选项</string>
@@ -219,8 +242,8 @@
 
     <string name="unsupported_owner">只有机主可以使用黑阈。</string>
     <string name="unsupported_clone">黑阈不支持“应用分身”。</string>
-    <string name="unsupported_modified">请不要使用任何方式修改黑阈。</string>
-    <string name="unsupported_path">（错误：无法生成指令文件）</string>
+    <string name="unsupported_modified">环境异常，黑阈可能无法正常工作。\n\n如果是官方原版系统，请黑阈内“反馈” - “日志”报告问题。\n\n如果系统已经修改但黑阈看起来正常，您可继续支付至 5 二向箔关闭部分安全提示。</string>
+    <string name="unsupported_path">（无法生成指令文件：%s）</string>
     <string name="unsupported_permission">没有权限访问黑阈服务。\n\n前台应用：%1$s。</string>
     <string name="unsupported_no_event">没有事件日志，黑阈无法自动工作。\n\n请稍后重试，或者联系 ROM 提供商。</string>
     <string name="unsupported_no_event2">自 %1$s 起没有事件日志，黑阈不再自动工作。\n\n请重启黑阈服务，或者联系 ROM 提供商。</string>
@@ -228,7 +251,6 @@
     <string name="unsupported_version_mismatched">黑阈服务正在升级，请稍候重试。</string>
     <string name="unsupported_logs">无法获取日志，请稍候重试。</string>
     <string name="unsupported_shell">无法启动黑阈服务。</string>
-    <string name="unsupported_no_local_network">黑阈无法访问本地网络，请调整网络设置、省电模式与强制低电耗（doze）等。\n\n必要时，带日志反馈，或者直接卸载。</string>
     <string name="unsupported_usb">Android 8 起，“USB 调试”停用后黑阈就失效。\n\n不要停用“USB 调试”，不要更改 USB 选项。</string>
     <string name="unsupported_granted">黑阈服务权限不足，部分功能暂不可用。请检查“开发者选项”中与“USB 调试”相关的设置。</string>
     <string name="unsupported_granted_miui">黑阈服务权限不足，部分功能暂不可用。请在“开发者选项”中开启“USB 调试（安全设置）”。</string>
@@ -237,6 +259,7 @@
     <string name="unsupported_brevented2">您已黑阈无法打开的应用：%1$s。\n\n是否不再黑阈？</string>
     <string name="unsupported_unauthorized">您正在使用未经授权的方式激活黑阈。</string>
     <string name="icon_required">被以下应用依赖：%1$s。</string>
+    <string name="icon_gapp">应用属于 GMS 应用。主动打开该应用会动态开启与停用 GMS。</string>
     <string name="icon_fcm">允许应用通过同步、广播及 FCM（Firebase Cloud Messaging）接收消息。</string>
     <string name="icon_sync">允许应用通过同步或广播接收消息。</string>
     <string name="icon_aggressive">应用处于激进模式。正常情况下，黑阈清单应用可以运行几秒钟，然后黑阈决定是否强行停止它；激进模式下，一旦被运行，黑阈会立即强行停止它。</string>
@@ -258,20 +281,18 @@
     <string name="apps_join">、</string>
 
     <string name="toast_working">黑阈服务运行正常</string>
-    <string name="toast_payment">感谢您支付 %1$s 二向箔</string>
     <string name="toast_developer">请手动开启“开发者选项”</string>
+    <string name="toast_event_error">黑阈服务无法读取事件日志</string>
 
     <string name="brevent_status_starting">正在启动黑阈服务</string>
     <string name="brevent_status_not_started">黑阈服务没有启动</string>
 
-    <string name="make_brevent_better">您的黑阈清单已超过绝大部分用户，请支付 %1$s以促进黑阈良性发展。</string>
-    <string name="make_brevent_safer">请谨慎黑阈系统应用，或者支付 %1$s关闭安全提示。</string>
     <string name="pay_brevent_require">需要支付 %s</string>
     <string name="pay_now">现在支付</string>
-    <string name="pay_lucky">试试手气</string>
+    <string name="pay_not_now_later">暂不支付（%1$d）</string>
+    <string name="pay_not_now">暂不支付</string>
 
     <string name="brevented_app">已黑阈“%1$s”</string>
-    <string name="brevented_app_pay">支付以黑阈更多应用。</string>
     <string name="unbrevented_app">取消黑阈“%1$s”</string>
     <string name="unbrevented_app_fail">取消黑阈“%1$s”失败，烦请进入黑阈处理</string>
     <string name="aggressive_app">已将“%1$s”设置激进</string>
@@ -308,13 +329,13 @@
     </string-array>
 
     <string name="version_free">免费版</string>
-    <string name="version_free_tip">使用黑阈，体验 Android</string>
+    <string name="version_free_tip">使用黑阈，享受 Android</string>
     <string name="version_unlimited">无限版</string>
     <string name="version_unlimited_tip">使用黑阈，享受 Android</string>
     <string name="version_pro">专业版</string>
-    <string name="version_pro_tip">使用黑阈，探索 Android</string>
+    <string name="version_pro_tip">使用黑阈，探索 Android（VIP）</string>
     <string name="version_contributor">特别贡献版</string>
-    <string name="version_contributor_tip">希望有一天不再需要黑阈</string>
+    <string name="version_contributor_tip">希望有一天不再需要黑阈（SVIP）</string>
 
     <string name="version_feizhi">飞智小游版</string>
 
@@ -324,7 +345,8 @@
     <string name="theme_nankai">南开</string>
     <string name="theme_amoled">省电</string>
 
-    <string name="shortcut_gms">添加 GMS 应用</string>
+    <string name="unmark_gapp">标识 GMS 应用</string>
+    <string name="mark_gapp">取消 GMS 应用</string>
     <string name="shortcut_instant">添加临时应用</string>
 
     <string name="warning_play_3">@string/warning_wechat_3</string>
@@ -334,6 +356,20 @@
 
     <string name="toast_error_network_play">无法缓存 Play 支付数据，请检查网络</string>
     <string name="toast_error_server_play">无法缓存 Play 支付数据，请稍候重试</string>
-    <bool name="support_wechat">true</bool>
+
+    <string name="new_version_available">发现新版本“%s”。</string>
+    <string name="latest_version">您已安装最新版本。</string>
+    <string name="beta_version">您正在使用测试版本。</string>
+    <string name="update_version">更新</string>
+
+    <string name="legal_drawer">条款与隐私政策</string>
+    <string name="legal_short">使用黑阈前请确认《条款与隐私政策》。简单来说，黑阈会通过 Google Analytics for Firebase 收集匿名使用日志。</string>
+    <string name="legal_accept">接受</string>
+
+    <string name="theme_fallback">%1$s（系统为深色主题，实际使用 Pixel）</string>
+
+    <string name="payment_sort">排序方式“%1$s”需要支付。是否现在支付？</string>
+
+    <string name="device_default">设备默认</string>
 
 </resources>
